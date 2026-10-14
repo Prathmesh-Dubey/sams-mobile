@@ -1,0 +1,101 @@
+/* "Talk to SAMS" chat widget. Loaded by js/sams-chat.js. All classes start with smc- (nothing else on the site does). */
+#samsChat{ --smc-navy:#0a1e33; --smc-navy2:#0f2846; --smc-sky:#2f8fef; --smc-deep:#1f6fd1; --smc-ice:#eaf3fe; --smc-ice2:#f4f9ff;
+  --smc-border:#dbe7f6; --smc-gray:#5b6b81; --smc-danger:#e5484d; font-family: var(--font-body, "Outfit", "Inter", system-ui, sans-serif); }
+#samsChat *, #samsChat *::before, #samsChat *::after{ box-sizing:border-box; }
+#samsChat[dir="rtl"]{ font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", "Geeza Pro", Arial, sans-serif; }
+#samsChat[data-lang="th"]{ font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif; }
+
+/* the round "back to top" button sits in the same corner: lift it above the chat button */
+.s2-top{ bottom:88px !important; }
+
+.smc-fab{ position:fixed; right:22px; bottom:22px; z-index:160; display:inline-flex; align-items:center; gap:10px; height:52px; padding:0 20px 0 16px;
+  border:0; border-radius:999px; background:var(--smc-navy); color:#fff; font:600 16px/1 inherit; font-family:inherit; cursor:pointer;
+  box-shadow:0 12px 32px rgba(15,40,70,.28); transition:background .25s, transform .25s; }
+.smc-fab:hover{ background:var(--smc-deep); transform:translateY(-1px); }
+.smc-fab:focus-visible, .smc-btn:focus-visible, .smc-opt:focus-visible, .smc-chip:focus-visible, .smc-x:focus-visible{ outline:3px solid var(--smc-sky); outline-offset:2px; }
+.smc-fab svg{ width:22px; height:22px; flex:none; }
+.smc-fab[hidden]{ display:none; }
+
+.smc-panel{ position:fixed; right:22px; bottom:22px; z-index:201; width:min(390px, calc(100vw - 28px)); height:min(640px, calc(100vh - 44px)); height:min(640px, calc(100dvh - 44px));
+  display:flex; flex-direction:column; background:#fff; border:1px solid var(--smc-border); border-radius:20px; overflow:hidden;
+  box-shadow:0 24px 64px rgba(15,40,70,.22); }
+.smc-panel[hidden]{ display:none; }
+
+.smc-head{ display:flex; align-items:center; gap:12px; padding:14px 16px; background:var(--smc-navy); color:#fff; flex:none; }
+.smc-head__dot{ width:38px; height:38px; border-radius:50%; background:var(--smc-sky); display:flex; align-items:center; justify-content:center; flex:none; }
+.smc-head__dot svg{ width:20px; height:20px; }
+.smc-head__t{ flex:1; min-width:0; }
+.smc-head__t strong{ display:block; font-size:17px; line-height:1.2; font-weight:700; }
+.smc-head__t span{ display:block; font-size:13px; opacity:.75; margin-top:2px; }
+.smc-x{ width:40px; height:40px; border:0; border-radius:50%; background:rgba(255,255,255,.12); color:#fff; font-size:24px; line-height:1; cursor:pointer; flex:none; }
+.smc-x:hover{ background:rgba(255,255,255,.22); }
+
+.smc-body{ flex:1; overflow-y:auto; padding:16px 14px; background:var(--smc-ice2); display:flex; flex-direction:column; gap:10px; overscroll-behavior:contain; }
+.smc-m{ max-width:86%; padding:10px 14px; border-radius:16px; font-size:16px; line-height:1.45; color:var(--smc-navy); overflow-wrap:anywhere; animation:smc-in .25s ease-out both; }
+.smc-m--bot{ align-self:flex-start; background:#fff; border:1px solid var(--smc-border); border-bottom-left-radius:5px; }
+.smc-m--user{ align-self:flex-end; background:var(--smc-deep); color:#fff; border-bottom-right-radius:5px; }
+#samsChat[dir="rtl"] .smc-m--bot{ border-bottom-left-radius:16px; border-bottom-right-radius:5px; }
+#samsChat[dir="rtl"] .smc-m--user{ border-bottom-right-radius:16px; border-bottom-left-radius:5px; }
+.smc-typing{ display:inline-flex; gap:4px; padding:12px 14px; }
+.smc-typing i{ width:7px; height:7px; border-radius:50%; background:var(--smc-gray); opacity:.5; animation:smc-dot 1s infinite ease-in-out; }
+.smc-typing i:nth-child(2){ animation-delay:.15s; } .smc-typing i:nth-child(3){ animation-delay:.3s; }
+@keyframes smc-dot{ 0%,80%,100%{ transform:translateY(0); opacity:.4; } 40%{ transform:translateY(-4px); opacity:1; } }
+@keyframes smc-in{ from{ opacity:0; transform:translateY(6px); } to{ opacity:1; transform:none; } }
+
+.smc-card{ align-self:stretch; background:#fff; border:1px solid var(--smc-border); border-radius:16px; padding:14px; }
+.smc-card p{ margin:0 0 10px; font-size:16px; line-height:1.45; color:var(--smc-navy); }
+.smc-f{ display:block; margin:0 0 10px; }
+.smc-f span{ display:block; margin:0 0 4px; font-size:14px; font-weight:600; color:var(--smc-gray); }
+.smc-in{ width:100%; min-height:46px; padding:10px 12px; border:1px solid #c2d8f2; border-radius:12px; background:#fff; color:var(--smc-navy);
+  font:400 16px/1.3 inherit; font-family:inherit; }          /* 16px: iOS does not zoom the page on focus */
+textarea.smc-in{ min-height:96px; resize:vertical; }
+.smc-in:focus{ outline:3px solid rgba(47,143,239,.35); border-color:var(--smc-sky); }
+.smc-in[aria-invalid="true"]{ border-color:var(--smc-danger); }
+.smc-hp{ position:absolute !important; left:-9999px !important; width:1px !important; height:1px !important; overflow:hidden !important; opacity:0 !important; }
+.smc-consent{ margin:2px 0 10px; font-size:13px; line-height:1.4; color:var(--smc-gray); }
+.smc-consent a{ color:var(--smc-deep); text-decoration:underline; }
+.smc-err{ margin:0 0 10px; font-size:14px; line-height:1.35; color:var(--smc-danger); font-weight:600; }
+.smc-err:empty{ display:none; }
+
+.smc-btn{ display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:0 20px; border:0; border-radius:12px;
+  background:var(--smc-deep); color:#fff; font:600 16px/1 inherit; font-family:inherit; cursor:pointer; }
+.smc-btn:hover{ background:var(--smc-navy2); }
+.smc-btn[disabled]{ opacity:.5; cursor:not-allowed; }
+.smc-btn--block{ width:100%; }
+.smc-btn--ghost{ background:transparent; color:var(--smc-deep); border:1px solid #c2d8f2; }
+.smc-btn--ghost:hover{ background:var(--smc-ice); }
+
+.smc-foot{ flex:none; padding:12px 14px 14px; background:#fff; border-top:1px solid var(--smc-border); max-height:55%; overflow-y:auto; }
+.smc-foot:empty{ display:none; }
+.smc-opts{ display:flex; flex-direction:column; gap:8px; }
+.smc-opt{ min-height:46px; padding:10px 14px; border:1px solid #c2d8f2; border-radius:12px; background:#fff; color:var(--smc-deep); font:600 16px/1.25 inherit; font-family:inherit; cursor:pointer; text-align:center; }
+.smc-opt:hover{ background:var(--smc-ice); border-color:var(--smc-sky); }
+.smc-chips{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 12px; }
+.smc-chip{ min-height:42px; padding:8px 14px; border:1px solid #c2d8f2; border-radius:999px; background:#fff; color:var(--smc-navy); font:500 15px/1.2 inherit; font-family:inherit; cursor:pointer; }
+.smc-chip[aria-pressed="true"]{ background:var(--smc-deep); border-color:var(--smc-deep); color:#fff; }
+.smc-row{ display:flex; gap:8px; }
+.smc-row .smc-btn{ flex:1; }
+.smc-foot .smc-in{ margin-bottom:10px; }
+.smc-turn{ margin:0 0 10px; min-height:0; }
+
+/* Phones. --smc-vw / --smc-rg are set by sams-chat.js from the VISIBLE screen (visualViewport), so the chat still fits when the page
+   itself is wider than the screen (the site header overflows below ~310px, which pushes every fixed element off the right edge). */
+@media (max-width:560px){
+  .smc-fab{ right:calc(14px + var(--smc-rg, 0px)); bottom:14px; }
+  .s2-top{ bottom:78px !important; right:14px !important; }
+  .smc-panel{ right:var(--smc-rg, 0px); left:auto; bottom:0; width:var(--smc-vw, 100%); max-width:100%; height:min(88vh, 680px); height:min(88dvh, 680px);
+    border-radius:20px 20px 0 0; border-left:0; border-right:0; border-bottom:0; }
+  .smc-body{ padding:14px 10px; }
+  .smc-m{ max-width:92%; }
+  .smc-head{ padding:12px 12px; gap:10px; }
+  .smc-foot{ padding:10px 10px 12px; }
+}
+@media (max-width:340px){
+  .smc-head__dot{ display:none; }
+  .smc-head__t span{ font-size:12px; }
+  .smc-card{ padding:12px 10px; }
+  .smc-fab span{ font-size:15px; }
+}
+@media (prefers-reduced-motion:reduce){
+  .smc-m, .smc-typing i, .smc-fab{ animation:none !important; transition:none !important; }
+}
