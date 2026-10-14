@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การขึ้นทะเบียน JSRS โอมาน สำหรับผู้จัดหา PDO และ OQ</title>
+<meta name="description" content="การขึ้นทะเบียน JSRS ในโอมาน: ระบบ Joint Supplier Registration System ทำงานอย่างไรสำหรับ PDO และ OQ ค่าใช้จ่าย ระยะเวลา และสิ่งที่ผู้จัดหาอุปกรณ์ Ex ต้องมี">
+<link rel="icon" href="/img/favicon.png?v=4" type="image/png">
+<link rel="preload" href="/fonts/pt-sans-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/arimo-normal-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style2.css?v=20261004d">
+<!-- seo:start -->
+<link rel="canonical" href="https://sams-mobile.com/th/insights/oman-jsrs-supplier-registration-pdo-oq/"><link rel="alternate" hreflang="en" href="https://sams-mobile.com/insights/oman-jsrs-supplier-registration-pdo-oq/"><link rel="alternate" hreflang="ar" href="https://sams-mobile.com/ar/insights/oman-jsrs-supplier-registration-pdo-oq/"><link rel="alternate" hreflang="de" href="https://sams-mobile.com/de/insights/oman-jsrs-supplier-registration-pdo-oq/"><link rel="alternate" hreflang="fr" href="https://sams-mobile.com/fr/insights/oman-jsrs-supplier-registration-pdo-oq/"><link rel="alternate" hreflang="es" href="https://sams-mobile.com/es/insights/oman-jsrs-supplier-registration-pdo-oq/"><link rel="alternate" hreflang="pt" href="https://sams-mobile.com/pt/insights/oman-jsrs-supplier-registration-pdo-oq/"><link rel="alternate" hreflang="ru" href="https://sams-mobile.com/ru/insights/oman-jsrs-supplier-registration-pdo-oq/"><link rel="alternate" hreflang="th" href="https://sams-mobile.com/th/insights/oman-jsrs-supplier-registration-pdo-oq/"><link rel="alternate" hreflang="x-default" href="https://sams-mobile.com/insights/oman-jsrs-supplier-registration-pdo-oq/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SAMS Mobile">
+<meta property="og:locale" content="th_TH">
+<meta property="og:title" content="การขึ้นทะเบียน JSRS โอมาน สำหรับผู้จัดหา PDO และ OQ">
+<meta property="og:description" content="การขึ้นทะเบียน JSRS ในโอมาน: ระบบ Joint Supplier Registration System ทำงานอย่างไรสำหรับ PDO และ OQ ค่าใช้จ่าย ระยะเวลา และสิ่งที่ผู้จัดหาอุปกรณ์ Ex ต้องมี">
+<meta property="og:url" content="https://sams-mobile.com/th/insights/oman-jsrs-supplier-registration-pdo-oq/">
+<meta property="og:image" content="https://sams-mobile.com/img/og/sams-is-04z1-og.jpg?v=20261012">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="สมาร์ทโฟนปลอดภัยในตัวเอง SAMS IS-04Z1">
+<meta property="article:published_time" content="2026-09-09">
+<meta property="article:modified_time" content="2026-10-02">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="การขึ้นทะเบียน JSRS โอมาน สำหรับผู้จัดหา PDO และ OQ">
+<meta name="twitter:description" content="การขึ้นทะเบียน JSRS ในโอมาน: ระบบ Joint Supplier Registration System ทำงานอย่างไรสำหรับ PDO และ OQ ค่าใช้จ่าย ระยะเวลา และสิ่งที่ผู้จัดหาอุปกรณ์ Ex ต้องมี">
+<meta name="twitter:image" content="https://sams-mobile.com/img/og/sams-is-04z1-og.jpg?v=20261012">
+<meta name="theme-color" content="#0B1B2E">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=4">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sams-mobile.com/#org", "name": "SAMS Mobile", "url": "https://sams-mobile.com/", "logo": {"@type": "ImageObject", "url": "https://sams-mobile.com/img/logo-blue.png"}, "email": "info@sams-mobile.com", "description": "SAMS Mobile is a UK-registered company developing the SAMS IS-04Z1, an intrinsically safe Android smartphone for Zone 1/21 hazardous areas, launching Q4 2026.", "address": {"@type": "PostalAddress", "addressCountry": "GB"}, "knowsAbout": ["Intrinsically safe smartphones", "Hazardous area communication", "ATEX", "IECEx", "NEC 500", "Zone 1 and Zone 21 hazardous areas", "Android Enterprise for industrial devices"]}, {"@type": "WebSite", "@id": "https://sams-mobile.com/#website", "url": "https://sams-mobile.com/th/", "name": "SAMS Mobile", "publisher": {"@id": "https://sams-mobile.com/#org"}, "inLanguage": "en"}, {"@type": "BreadcrumbList", "@id": "https://sams-mobile.com/insights/oman-jsrs-supplier-registration-pdo-oq/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://sams-mobile.com/th/"}, {"@type": "ListItem", "position": 2, "name": "บทความเชิงลึก", "item": "https://sams-mobile.com/th/insights/"}, {"@type": "ListItem", "position": 3, "name": "คู่มือสำหรับผู้ขาย", "item": "https://sams-mobile.com/th/insights/category/vendor-guides/"}, {"@type": "ListItem", "position": 4, "name": "การลงทะเบียน JSRS ของโอมาน: เส้นทางของผู้จัดจำหน่ายสู่ PDO, OQ และภาคพลังงานของโอมาน", "item": "https://sams-mobile.com/th/insights/oman-jsrs-supplier-registration-pdo-oq/"}]}, {"@type": "WebPage", "@id": "https://sams-mobile.com/insights/oman-jsrs-supplier-registration-pdo-oq/#webpage", "url": "https://sams-mobile.com/th/insights/oman-jsrs-supplier-registration-pdo-oq/", "name": "การขึ้นทะเบียน JSRS โอมาน สำหรับผู้จัดหา PDO และ OQ", "description": "การขึ้นทะเบียน JSRS ในโอมาน: ระบบ Joint Supplier Registration System ทำงานอย่างไรสำหรับ PDO และ OQ ค่าใช้จ่าย ระยะเวลา และสิ่งที่ผู้จัดหาอุปกรณ์ Ex ต้องมี", "isPartOf": {"@id": "https://sams-mobile.com/#website"}, "inLanguage": "th", "primaryImageOfPage": {"@type": "ImageObject", "url": "https://sams-mobile.com/img/og/sams-is-04z1-og.jpg?v=20261012"}, "breadcrumb": {"@id": "https://sams-mobile.com/insights/oman-jsrs-supplier-registration-pdo-oq/#breadcrumb"}}, {"@type": "TechArticle", "@id": "https://sams-mobile.com/insights/oman-jsrs-supplier-registration-pdo-oq/#article", "headline": "การลงทะเบียน JSRS ของโอมาน: เส้นทางของผู้จัดจำหน่ายสู่ PDO, OQ และภาคพลังงานของโอมาน", "description": "การขึ้นทะเบียน JSRS ในโอมาน: ระบบ Joint Supplier Registration System ทำงานอย่างไรสำหรับ PDO และ OQ ค่าใช้จ่าย ระยะเวลา และสิ่งที่ผู้จัดหาอุปกรณ์ Ex ต้องมี", "image": "https://sams-mobile.com/img/og/sams-is-04z1-og.jpg?v=20261012", "author": {"@id": "https://sams-mobile.com/#org"}, "publisher": {"@id": "https://sams-mobile.com/#org"}, "mainEntityOfPage": {"@id": "https://sams-mobile.com/th/insights/oman-jsrs-supplier-registration-pdo-oq/#webpage"}, "inLanguage": "th", "articleSection": "คู่มือสำหรับผู้ขาย", "about": {"@id": "https://sams-mobile.com/product/#product"}, "datePublished": "2026-09-09", "dateModified": "2026-10-02"}, {"@type": "FAQPage", "@id": "https://sams-mobile.com/insights/oman-jsrs-supplier-registration-pdo-oq/#faq", "mainEntity": [{"@type": "Question", "name": "การขึ้นทะเบียน JSRS สำหรับผู้จัดหาต่างประเทศมีค่าใช้จ่ายเท่าใด", "acceptedAnswer": {"@type": "Answer", "text": "ตัวเลขที่เผยแพร่ ณ เวลาที่เขียนระบุว่าค่าสมาชิกสำหรับผู้จัดหาต่างประเทศประมาณ 1,000 ดอลลาร์สหรัฐสำหรับหนึ่งปี หรือ 2,250 ดอลลาร์สหรัฐสำหรับสามปี บริษัทสัญชาติโอมานจ่ายค่าธรรมเนียมแบบแบ่งช่วงประมาณ 50 ถึง 900 เรียลโอมานตามการจัดประเภท บวก VAT ค่าธรรมเนียมมีการปรับปรุง ดังนั้นตัวเลขที่เชื่อถือได้คือตัวเลขที่แสดงบนพอร์ทัล JSRS ขณะขึ้นทะเบียน"}}, {"@type": "Question", "name": "ใบรับรอง JSRS มีอายุนานเท่าใด", "acceptedAnswer": {"@type": "Answer", "text": "ใบรับรองสำหรับผู้จัดหาสัญชาติโอมานมีอายุสามปี ผู้จัดหาต่างประเทศถือตามอายุที่สมัครไว้ โดยเลือกระหว่างสมาชิกหนึ่งปีหรือสามปี ตัวเลือกสามปีมีส่วนลดเมื่อเทียบกับการต่อรายปีสามครั้ง ผู้จัดหาที่ได้รับสัญญาหรือใบสั่งซื้อต้องรักษาใบรับรองที่ยังมีผลตลอดระยะเวลาสัญญา ไม่ใช่เพียง ณ เวลายื่นเสนอราคา"}}, {"@type": "Question", "name": "โทรศัพท์ต้องได้รับการอนุมัติแบบจาก TRA จึงจะนำเข้าโอมานได้หรือไม่", "acceptedAnswer": {"@type": "Answer", "text": "ใช่ อุปกรณ์วิทยุและโทรคมนาคมต้องได้รับการอนุมัติแบบจาก Telecommunications Regulatory Authority และสินค้าที่จัดส่งต้องมีใบอนุญาตนำเข้าจาก TRA เพื่อผ่านศุลกากร ทั้งสองใบสมัครยื่นโดยผู้จัดหาที่ขึ้นทะเบียนในโอมาน ในเดือนมีนาคม 2026 TRA ได้เริ่มบริการประกาศความสอดคล้องด้วยตนเอง ซึ่งใช้แทนรายงานการทดสอบภาคบังคับสำหรับอุปกรณ์ที่เข้าเกณฑ์ และทำให้ระยะเวลาพิจารณาสั้นลง"}}, {"@type": "Question", "name": "มีการให้คะแนนมูลค่าในประเทศในการประมูลน้ำมันและก๊าซของโอมานหรือไม่", "acceptedAnswer": {"@type": "Answer", "text": "มี แต่เป็นแบบรวมศูนย์น้อยกว่าในสหรัฐอาหรับเอมิเรตส์หรือกาตาร์ ICV ฝังอยู่ในการประเมินการประมูลผ่านข้อกำหนด เงื่อนไข และตัวชี้วัดมาตรฐาน โดยกระทรวงพลังงานและแร่ธาตุและคณะกรรมการ ICV ทำหน้าที่กำกับดูแล การจ้างงานชาวโอมานและการใช้ SME และผู้รับเหมาในชุมชนท้องถิ่นเป็นภาระผูกพันที่มีการตรวจสอบ การนำไปใช้ต่างกันตามผู้ดำเนินการและสัญญา ดังนั้นควรอ่านข้อกำหนด ICV ของแต่ละการประมูล"}}], "isPartOf": {"@id": "https://sams-mobile.com/insights/oman-jsrs-supplier-registration-pdo-oq/#webpage"}, "inLanguage": "th"}]}</script>
+<!-- seo:end -->
+<script src="/js/sams-config.js?v=20261004d" defer=""></script>
+<script src="/js/sams-consent.js?v=20261004d" defer=""></script>
+</head>
+<body>
+<a class="s2-skip" href="#s2-main">ข้ามไปยังเนื้อหา</a>
+<header class="s2-nav" id="s2Nav">
+<div class="s2-nav__bar">
+<a href="/th/" class="s2-nav__logo">
+<img decoding="async" src="/img/logo-blue.png" alt="SAMS Mobile" width="400" height="273">
+<span class="s2-nav__logo-text">IS-04Z1</span>
+</a>
+<nav class="s2-nav__links" id="s2NavLinks" aria-label="หลัก">
+<a href="/th/product/"><span>ผลิตภัณฑ์</span></a>
+<a href="/th/certifications/"><span>การรับรอง</span></a>
+<a href="/th/industries/"><span>อุตสาหกรรม</span></a>
+<a href="/th/insights/" aria-current="page"><span>บล็อก</span></a>
+<a href="/th/about/"><span>เกี่ยวกับเรา</span></a>
+<a href="/th/contact/"><span>ติดต่อ</span></a>
+</nav>
+<div class="s2-nav__actions">
+<span class="s2-nav__status">
+<span class="s2-status-dot" aria-hidden="true"><span class="s2-status-dot__ping"></span></span>
+<span class="s2-nav__status-text">
+<strong>อยู่ระหว่างการรับรอง</strong>
+<span class="s2-nav__status-sep">·</span>
+<span>เปิดตัวไตรมาส 4 ปี 2026</span>
+</span>
+</span>
+<a href="/th/become-a-distributor/" class="s2-btn s2-btn--ghost s2-btn--sm">เป็นตัวแทนจำหน่าย</a>
+<div class="s2-lang">
+<button class="s2-lang__btn" id="s2LangBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="s2LangMenu" aria-label="ภาษา"><span class="s2-lang__full">ไทย</span><span class="s2-lang__short">TH</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<ul class="s2-lang__menu" id="s2LangMenu" hidden>
+<li><a href="/insights/oman-jsrs-supplier-registration-pdo-oq/" hreflang="en" lang="en">English</a></li>
+<li><a href="/ar/insights/oman-jsrs-supplier-registration-pdo-oq/" hreflang="ar" lang="ar">العربية</a></li>
+<li><a href="/de/insights/oman-jsrs-supplier-registration-pdo-oq/" hreflang="de" lang="de">Deutsch</a></li>
+<li><a href="/fr/insights/oman-jsrs-supplier-registration-pdo-oq/" hreflang="fr" lang="fr">Français</a></li>
+<li><a href="/es/insights/oman-jsrs-supplier-registration-pdo-oq/" hreflang="es" lang="es">Español</a></li>
+<li><a href="/pt/insights/oman-jsrs-supplier-registration-pdo-oq/" hreflang="pt" lang="pt">Português</a></li>
+<li><a href="/ru/insights/oman-jsrs-supplier-registration-pdo-oq/" hreflang="ru" lang="ru">Русский</a></li>
+<li><span class="s2-lang__current" aria-current="true">ไทย</span></li>
+</ul>
+</div>
+<button class="s2-nav__toggle" id="s2NavToggle" type="button" aria-label="สลับเมนู" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+<div class="s2-nav__mobile" id="s2NavMobile">
+<span class="s2-nav__status s2-nav__status--mobile">
+<span class="s2-status-dot" aria-hidden="true"><span class="s2-status-dot__ping"></span></span>
+<span class="s2-nav__status-text">
+<strong>อยู่ระหว่างการรับรอง</strong>
+<span class="s2-nav__status-sep">·</span>
+<span>เปิดตัวไตรมาส 4 ปี 2026</span>
+</span>
+</span>
+<a href="/th/product/">ผลิตภัณฑ์</a>
+<a href="/th/certifications/">การรับรอง</a>
+<a href="/th/industries/">อุตสาหกรรม</a>
+<a href="/th/insights/">บล็อก</a>
+<a href="/th/about/">เกี่ยวกับเรา</a>
+<a href="/th/contact/">ติดต่อ</a>
+<a href="/th/become-a-distributor/" class="s2-btn s2-btn--primary">เป็นตัวแทนจำหน่าย</a>
+</div>
+</header>
+<main id="s2-main">
+<section class="s2-pg-hero s2-pg-hero--compact">
+<div class="s2-pg-hero__grid" aria-hidden="true"></div>
+<div class="s2-pg-hero__glow" aria-hidden="true"></div>
+<div class="s2-wrap s2-pg-hero__inner">
+<div class="s2-pg-hero__copy">
+<nav class="s2-pg-crumbs" aria-label="เส้นทางนำทาง"><a href="/th/">หน้าแรก</a><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><a href="/th/insights/">บล็อก</a><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><a href="/th/insights/category/vendor-guides/">คู่มือสำหรับผู้ขาย</a></nav>
+<span data-reveal=""><span class="s2-eyebrow s2-eyebrow--onnavy"><span class="s2-eyebrow__dot"></span>คู่มือสำหรับผู้ขาย</span></span>
+<h1 data-reveal="">การลงทะเบียน JSRS ของโอมาน: เส้นทางของผู้จัดจำหน่ายสู่ PDO, OQ และภาคพลังงานของโอมาน</h1>
+<div class="s2-pg-meta" data-modified="2026-10-02" data-reveal=""><span><time datetime="2026-09-09">9 กันยายน 2026</time></span><span>อัปเดต <time datetime="2026-10-02">2 ตุลาคม 2026</time></span><span>อ่าน 11 นาที</span><a href="/th/insights/category/vendor-guides/">คู่มือสำหรับผู้ขาย</a></div>
+<p class="s2-pg-hero__lede" data-reveal="">ระบบ Joint Supplier Registration System ทำงานอย่างไร เหตุใด PDO และ OQ จึงไม่ทำธุรกิจกับผู้จัดหาที่ไม่มีใบรับรองที่ยังมีผล ค่าใช้จ่ายและอายุใบรับรอง การนำมูลค่าในประเทศ (in-country value) มาใช้ในโอมาน และเอกสารชุดอุปกรณ์ Ex ที่ต้องใช้</p>
+</div>
+</div>
+</section>
+<section class="s2-pg-sec s2-pg-sec--article">
+<div class="s2-wrap s2-pg-article">
+<article class="s2-pg-article__body s2-pg-rich">
+<div class="s2-pg-takeaways"><strong>ประเด็นสำคัญ</strong>
+<ul>
+<li>ตั้งแต่ 1 กรกฎาคม 2021 ผู้จัดหาที่เสนอราคาให้ผู้ดำเนินการน้ำมันและก๊าซของโอมานต้องมีใบรับรอง JSRS ที่ยังมีผล และรักษาให้มีผลตลอดระยะเวลาสัญญา</li>
+<li>ผู้ซื้อใน JSRS ค้นหาด้วย JSRS Category Code ดังนั้นผู้จัดหาอุปกรณ์อิเล็กทรอนิกส์สำหรับพื้นที่อันตรายควรขอรหัส JCC ทุกรหัสที่เกี่ยวข้องจริง รวมถึงอุปกรณ์เสริม เครื่องชาร์จ และบริการ</li>
+<li>ใบรับรอง JSRS ทำให้ผู้จัดหามีสิทธิ์ทำงานกับ PDO แต่ยังมีการประเมินทางเทคนิคแยกต่างหากสำหรับใบรับรอง Ex สตริงเครื่องหมาย และระดับการป้องกัน</li>
+<li>OQ8 ซึ่งดำเนินการโรงกลั่นดูกม์ เป็นกิจการร่วมค้าสัดส่วนห้าสิบต่อห้าสิบระหว่าง OQ และ Kuwait Petroleum International และเป็นนิติบุคคลแยกจาก OQ</li>
+</ul>
+</div>
+<p>โอมานทำสิ่งที่ประเทศอื่นในอ่าวไม่ทำ แทนที่จะปล่อยให้ผู้ดำเนินการแต่ละรายคัดเลือกคุณสมบัติผู้จัดหาซ้ำซ้อนกันเอง ภาคส่วนนี้ใช้ทะเบียนร่วมเพียงแห่งเดียว และผู้จัดหาที่ไม่เป็นปัจจุบันในทะเบียนนั้นจะไม่ได้เสนอราคาที่ใดเลย ทะเบียนนั้นคือ Joint Supplier Registration System หรือ JSRS และเป็นสิ่งที่มีประโยชน์ที่สุดที่ควรทำความเข้าใจในการขายอุปกรณ์เข้าโอมาน เพราะเปลี่ยนการอนุมัติที่ต้องทำแยกกันกว่าสิบกระบวนการให้เหลือเพียงหนึ่งเดียว</p>
+<p>มีเนื้อหาเกี่ยวกับ JSRS สำหรับผู้รับเหมาและบริษัทบริการอยู่มากมาย แต่แทบไม่มีเขียนสำหรับผู้ผลิตอุปกรณ์ ซึ่งใบสมัครถูกจัดหมวดต่างออกไป และเอกสารชุดผลิตภัณฑ์ยังถูกใช้ต่อในการทบทวนทางเทคนิคของผู้ดำเนินการอีกนานหลังการขึ้นทะเบียนเสร็จสิ้น คู่มือนี้ครอบคลุมกลไกที่เป็นอยู่ในปี 2026 กรอบมูลค่าในประเทศที่ใช้ควบคู่กัน และสิ่งที่เอกสารชุดอุปกรณ์ Ex ต้องมีสำหรับผู้ซื้อชาวโอมาน</p>
+<h2 id="s-what-jsrs-is-and-who-runs-it">JSRS คืออะไร และใครเป็นผู้ดำเนินการ</h2>
+<p>JSRS คือระบบรับรองผู้จัดหาทั่วทั้งอุตสาหกรรมของโอมาน ดำเนินการโดย Business Gateways International ในนามกระทรวงพลังงานและแร่ธาตุ เริ่มใช้ในปี 2014 เป็นโครงการมูลค่าในประเทศสำหรับอุตสาหกรรมน้ำมันและก๊าซของโอมาน และทำหน้าที่ทั้งเป็นด่านตรวจสอบการปฏิบัติตามข้อกำหนดและเป็นตลาดกลาง ผู้ดำเนินการและผู้รับเหมาค้นหาในระบบ และผู้จัดหาปรากฏให้เห็นตามหมวดหมู่</p>
+<p>ในส่วนการปฏิบัติตามข้อกำหนด เปลี่ยนจากคำแนะนำเป็นข้อบังคับเมื่อ 1 กรกฎาคม 2021 นับจากวันนั้น กระทรวงพลังงานและแร่ธาตุกำหนดว่าผู้จัดหาทุกรายที่เข้าร่วมกิจกรรมเสนอราคาใดๆ ที่ผู้ดำเนินการน้ำมันและก๊าซและบริษัทผู้รับสัมปทานเปิดขึ้น ต้องมีใบรับรอง JSRS ที่ยังมีผล ผู้รับเหมาและผู้จัดหาที่ได้รับสัญญาและใบสั่งซื้อต้องมีใบรับรองที่ยังมีผลตลอดระยะเวลาสัญญา ไม่ใช่เพียง ณ เวลายื่นเสนอราคา ข้อหลังนี้คือสิ่งที่ทำให้ผู้จัดหาพลาดบ่อย การปล่อยให้ใบรับรองหมดอายุกลางสัญญาเป็นปัญหาทางสัญญา ไม่ใช่เรื่องธุรการ</p>
+<p>ชุมชนผู้ดำเนินการที่ใช้ระบบนี้ประกอบด้วย Petroleum Development Oman, Shell Development Oman, BP Exploration (Epsilon), Oman LNG และ OQ Exploration and Production รวมผู้ดำเนินการราวยี่สิบราย และมีผู้รับเหมาจำนวนมากกว่านั้นมากที่จัดหาผ่านระบบ JSRS ยังเผยแพร่ตัวเลขภาพรวมของผู้จัดหาที่ขึ้นทะเบียนและผลิตภัณฑ์ที่จัดทำแคตตาล็อก ให้ถือเป็นข้อมูลการตลาด ไม่ใช่ข้อมูลข่าวกรองด้านจัดซื้อ และให้ตัดสินระบบจากรายชื่อผู้ดำเนินการแทน</p>
+<h2 id="s-the-registration-process-and-the-jcc-category-code">กระบวนการขึ้นทะเบียนและรหัสหมวดหมู่ JCC</h2>
+<p>การขึ้นทะเบียนเองไม่ซับซ้อน คุณยื่นแบบฟอร์มขึ้นทะเบียนพร้อมข้อมูลบริษัทและขีดความสามารถ ยอมรับการยืนยันคำสั่งซื้อ รับข้อมูลเข้าสู่ระบบ ชำระค่าสมาชิก จากนั้นทีมตรวจสอบและทีมบัญชีของ Business Gateways จะทบทวนข้อมูลที่ยื่นก่อนเปิดใช้งานบัญชีและแดชบอร์ด รายการเอกสารเป็นชุดปกติ ได้แก่ การจดทะเบียนนิติบุคคล งบการเงิน ประกันภัย และหลักฐานด้านคุณภาพและสุขภาพ ความปลอดภัย และสิ่งแวดล้อม</p>
+<p>สิ่งที่กำหนดจริงๆ ว่าการขึ้นทะเบียนจะให้ประโยชน์กับคุณหรือไม่คือการกำหนดรหัสหมวดหมู่ JSRS ใช้อนุกรมวิธานของตนเอง คือ JSRS Category Code หรือ JCC ซึ่งพัฒนาขึ้นเพื่อจับคู่ผลิตภัณฑ์และบริการกับอุตสาหกรรมน้ำมันและก๊าซอย่างแม่นยำ แทนการจัดประเภททั่วไปที่ระบบเคยอิงอยู่ ผู้ซื้อค้นหาด้วยรหัสนี้</p>
+<p>สำหรับอุปกรณ์อิเล็กทรอนิกส์ในพื้นที่อันตราย นี่คือขั้นตอนที่ผู้จัดหาหายไปอย่างเงียบๆ เครื่องโทรศัพท์สำหรับ Zone 1 อาจจัดอยู่ใต้อุปกรณ์สื่อสาร อุปกรณ์ไฟฟ้าสำหรับพื้นที่อันตราย อุปกรณ์ความปลอดภัย และฮาร์ดแวร์ไอที และผู้ออกใบขอซื้ออาจค้นหาจากหมวดใดก็ได้ ขึ้นอยู่กับว่าฝ่ายใดเป็นเจ้าของงบประมาณ ให้ขอรหัส JCC ทุกรหัสที่เกี่ยวข้องจริง รวมถึงอุปกรณ์เสริม เครื่องชาร์จ และบริการจัดการอุปกรณ์หรือบริการสนับสนุนใดๆ ที่คุณให้ จากนั้นตรวจดูบันทึกของคุณเองแบบที่ผู้ซื้อจะดู โดยใช้คำค้นหาที่พวกเขาจะใช้ ผู้ผลิตที่ถูกจัดอยู่ภายใต้รหัสกว้างๆ เพียงรหัสเดียวจะไม่ปรากฏในการค้นหาอื่น และไม่มีการติดตามผลใดแก้ปัญหาอนุกรมวิธานได้</p>
+<p>ระบบยังมีโครงสร้างเป็นชั้น ประกอบด้วยชั้นกรอบธุรกิจระดับชาติ แพลตฟอร์มการรับรอง JSRS เอง และชั้นเสริมสำหรับการรับรองอุตสาหกรรมเพิ่มเติม ควรทำความเข้าใจว่ากิจกรรมที่คุณตั้งใจทำต้องใช้ชั้นใดจริงๆ ก่อนซื้อมากกว่าที่จำเป็น</p>
+<h2 id="s-fees-and-validity">ค่าธรรมเนียมและอายุใบรับรอง</h2>
+<p>JSRS เป็นระบบที่ไม่เหมือนใครในบรรดาระบบขึ้นทะเบียนของอ่าว ตรงที่เปิดเผยโครงสร้างค่าธรรมเนียมอย่างเปิดเผย ทำให้วางแผนได้ง่ายขึ้น</p>
+<p>สำหรับบริษัทสัญชาติโอมาน ค่าสมาชิกแบ่งเป็นช่วงตามการจัดประเภทบริษัท โดยใช้กรอบการจัดประเภทวิสาหกิจขนาดกลางและขนาดย่อม (SME) มีช่วงไมโคร ขนาดเล็ก และขนาดกลางที่ระดับต่ำ และช่วงที่สูงกว่ามากสำหรับบริษัทขนาดใหญ่ มีช่วงแยกต่างหากสำหรับบริษัทที่ไม่ได้จัดประเภทตามกรอบ SME ผู้จัดหาต่างประเทศจ่ายค่าธรรมเนียมคงที่ โดยเลือกสมาชิกหนึ่งปีหรือสามปีได้ ตัวเลือกสามปีมีส่วนลดเมื่อเทียบกับการต่อรายปีสามครั้ง</p>
+<p>ตัวเลขที่เผยแพร่ ณ เวลาที่เขียนระบุว่าช่วงของบริษัทโอมานอยู่ระหว่างประมาณ 50 ถึง 900 เรียลโอมาน ขึ้นอยู่กับการจัดประเภท และค่าสมาชิกต่างประเทศประมาณ 1,000 ดอลลาร์สหรัฐสำหรับหนึ่งปี หรือ 2,250 ดอลลาร์สหรัฐสำหรับสามปี โดยบริษัทโอมานต้องเสียภาษีมูลค่าเพิ่มด้วย ให้ถือตัวเลขเหล่านี้เป็นข้อบ่งชี้ ไม่ใช่ตัวเลขปัจจุบัน เพราะค่าธรรมเนียมมีการปรับปรุง และตัวเลขที่เชื่อถือได้คือตัวเลขที่แสดงบนพอร์ทัล JSRS ขณะที่คุณขึ้นทะเบียน ใบรับรองสำหรับผู้จัดหาสัญชาติโอมานมีอายุสามปี ส่วนผู้จัดหาต่างประเทศถือตามอายุที่สมัครไว้</p>
+<p>ต้นทุนที่แท้จริงก็เหมือนที่อื่น คืออยู่ภายใน เวลาหลายสัปดาห์หมดไปกับการรวบรวมงบการเงินที่ผ่านการตรวจสอบ ประกันภัยที่มีขอบเขตถูกต้อง และเอกสารสุขภาพ ความปลอดภัย และสิ่งแวดล้อมที่อ่านแล้วเป็นระบบการจัดการจริง ไม่ใช่เพียงแถลงการณ์นโยบาย ผู้ดำเนินการชาวโอมาน โดยเฉพาะ Petroleum Development Oman อ่านส่วน HSE อย่างละเอียด และผู้จัดหาอุปกรณ์ความปลอดภัยที่มีเรื่องราวการจัดการความปลอดภัยไม่น่าเชื่อถือจะสร้างความประทับใจที่แก้ไขได้ยากในภายหลัง</p>
+<h2 id="s-how-pdo-uses-jsrs">PDO ใช้ JSRS อย่างไร</h2>
+<p>Petroleum Development Oman เป็นผู้ซื้อรายเดียวที่ใหญ่ที่สุดในภาคต้นน้ำของโอมาน และเป็นเหตุผลที่ผู้จัดหาส่วนใหญ่เข้าหาประเทศนี้ จุดยืนของ PDO ระบุไว้ตรงไปตรงมา คือผู้ขายและผู้จัดหาผลิตภัณฑ์และบริการทุกรายที่ต้องการทำธุรกิจกับ PDO ควรมีใบรับรอง JSRS ที่ใช้ได้ JSRS เป็นข้อกำหนดเบื้องต้น ไม่ใช่การเดินทางทั้งหมด และการมีใบรับรองทำให้คุณมีสิทธิ์ได้รับการว่าจ้าง ไม่ได้รับประกันว่าจะได้รับ</p>
+<p>สิ่งที่ตามมาสำหรับผู้ผลิตอุปกรณ์คือการประเมินทางเทคนิคตามข้อกำหนดของ PDO เอง ซึ่งสำหรับอุปกรณ์ไฟฟ้าในพื้นที่อันตรายหมายถึงใบรับรอง สตริงเครื่องหมาย และระดับการป้องกันอุปกรณ์ ไม่ใช่เอกสารข้อมูลจำเพาะ ควรวางแผนสองไทม์ไลน์ที่ดำเนินไปพร้อมกัน คือไทม์ไลน์การขึ้นทะเบียนที่คุณเริ่มได้ทันที และไทม์ไลน์การยอมรับทางเทคนิคที่ขึ้นกับหน่วยงานวิศวกรรมภายในผู้ดำเนินการและเดินไปตามจังหวะของตนเอง</p>
+<p>สภาพแวดล้อมการปฏิบัติงานของ PDO กำหนดข้อกำหนดทางเทคนิคมากกว่าเอกสารใดๆ แหล่งในพื้นที่ตอนในต้องเดินทางผ่านถนนทะเลทรายสายยาว และที่สถานีห่างไกลใน Block 6 เครื่องที่เสียจะไม่ได้รับการเปลี่ยนจนกว่าจะถึงรอบขนส่งครั้งถัดไป การเพิ่มผลผลิตด้วยความร้อนและสารเคมีที่การ์นอาลัมและมุไคซนารวมพื้นผิวร้อน ไอไฮโดรคาร์บอน และการจราจรซ่อมบำรุงหนาแน่นไว้ด้วยกัน การพึ่งตนเองได้ การซีล และความทนทานของแบตเตอรี่จึงมีน้ำหนักในการประเมินที่โอมานมากกว่าในตลาดที่ร้านค้าอยู่ห่างเพียงเดินห้านาที</p>
+<h2 id="s-oq-oq8-and-the-rest-of-the-operator-community">OQ, OQ8 และชุมชนผู้ดำเนินการอื่นๆ</h2>
+<p>OQ คือกลุ่มพลังงานแบบบูรณาการของรัฐ ครอบคลุมตั้งแต่ต้นน้ำจนถึงการกลั่น ปิโตรเคมี และการตลาด หน่วยสำรวจและผลิตจัดหาผ่าน JSRS เช่นเดียวกับผู้ดำเนินการรายอื่น และหน่วยงาน OQ ในห่วงโซ่ปลายน้ำและโลจิสติกส์ใช้ผู้จัดหาที่มีใบรับรอง JSRS ในการจัดซื้อ</p>
+<p>มีสินทรัพย์ที่เกี่ยวข้องกับ OQ สองแห่งที่ควรให้ความสนใจแยกต่างหาก เพราะมักถูกระบุผิดเจ้าของ</p>
+<ul>
+<li><strong>โซฮาร์</strong> โรงกลั่นและเขตอุตสาหกรรมปิโตรเคมีโดยรอบที่โซฮาร์อยู่ภายใต้การดำเนินงานปลายน้ำของ OQ ควบคู่กับท่าเรือและเขตปลอดอากรโซฮาร์ซึ่งมีประชากรภาคอุตสาหกรรมของตนเอง งานซ่อมบำรุงใหญ่ (turnaround) ที่นี่ดึงผู้รับเหมาจำนวนมากที่ได้รับอุปกรณ์ตลอดช่วงงาน ซึ่งเป็นลักษณะที่เหมาะกับกลุ่มอุปกรณ์ที่ลงทะเบียนจากส่วนกลางและลบข้อมูลจากระยะไกลได้</li>
+<li><strong>ดูกม์</strong> โรงกลั่นที่ดูกม์ดำเนินการโดย OQ8 ซึ่งเป็นกิจการร่วมค้าสัดส่วนห้าสิบต่อห้าสิบระหว่าง OQ และ Kuwait Petroleum International มีกำลังการผลิตตามป้ายประมาณ 230,000 บาร์เรลต่อวัน ตั้งอยู่ในเขตเศรษฐกิจพิเศษดูกม์ เป็นนิติบุคคลแยกจาก OQ และผู้จัดหาที่สันนิษฐานว่าความสัมพันธ์กับ OQ จะครอบคลุมถึงดูกม์โดยอัตโนมัติกำลังตั้งสมมติฐานที่ควรตรวจสอบ</li>
+</ul>
+<p>นอกเหนือจากนั้น Oman LNG ดำเนินการสายการผลิตก๊าซเหลวและท่าเทียบเรือที่กัลฮัตใกล้ซูร์ และมีกระบวนการขึ้นทะเบียนผู้จัดหาของตนเองควบคู่กับ JSRS เช่นเดิม ควรตัดสินใจว่าจะมุ่งเป้าผู้ดำเนินการรายใดโดยเฉพาะ และตรวจสอบว่าแต่ละรายจัดซื้ออย่างไรจริง</p>
+<h2 id="s-in-country-value-in-oman">มูลค่าในประเทศ (In-country value) ในโอมาน</h2>
+<p>กรอบมูลค่าในประเทศของโอมานมีมานานกว่าและให้คะแนนแบบรวมศูนย์น้อยกว่าของเอมิเรตส์หรือกาตาร์ แต่ฝังอยู่ในการประเมินการประมูล ไม่ได้เป็นส่วนที่ต่อเติมภายหลัง การบูรณาการเป็นความรับผิดชอบของกระทรวงพลังงานและแร่ธาตุ ซึ่งทำงานกับผู้ดำเนินการเพื่อให้แน่ใจว่าข้อกำหนด ICV ถูกเขียนไว้ในสัญญาและขอบเขตงาน และคณะกรรมการ ICV ที่รวมภาครัฐและอุตสาหกรรมทำหน้าที่กำกับดูแล ภาคส่วนนี้พัฒนาข้อกำหนดและเงื่อนไข ICV มาตรฐาน และตัวชี้วัดมาตรฐาน เพื่อให้ผู้เสนอราคาได้รับการประเมินอย่างสม่ำเสมอ โดยมีชุดองค์ประกอบที่กำหนดไว้เป็นส่วนหนึ่งของเกณฑ์การประเมิน และมีกลไกการรายงานแนบอยู่</p>
+<p>มีสองลักษณะที่สำคัญต่อผู้จัดหาอุปกรณ์มากกว่าการให้คะแนนเอง ข้อแรกคือการจ้างงานชาวโอมาน (Omanisation) การจ้างงานและพัฒนาพลเมืองโอมานเป็นภาระผูกพันที่มีผลจริงและมีการตรวจสอบ ไม่ใช่เพียงความต้องการที่แจ้งไว้ ข้อที่สองคือข้อกำหนดให้ใช้วิสาหกิจขนาดกลางและขนาดย่อมและผู้รับเหมาในชุมชนท้องถิ่น ซึ่งบังคับใช้ผ่านระบบบริหารสัญญา และส่งผลลงไปถึงวิธีที่ผู้รับเหมาหลักจัดโครงสร้างห่วงโซ่อุปทานของตนเอง</p>
+<p>ควรทราบด้วยว่าหน่วยงานตรวจสอบของรัฐโอมานได้ชี้ต่อสาธารณะถึงความไม่สอดคล้องในวิธีที่บริษัทน้ำมันและก๊าซนำโปรแกรม ICV ไปใช้ การอ่านอย่างตรงไปตรงมาสำหรับผู้จัดหาคือ ข้อกำหนดนี้มีอยู่จริง แต่การนำไปใช้ต่างกันตามผู้ดำเนินการและสัญญา ดังนั้นแนวทางที่ใช้ได้จริงคืออ่านข้อกำหนด ICV ในการประมูลนั้นๆ แทนที่จะวางแผนตามกฎระดับชาติทั่วไป</p>
+<p>สำหรับผู้ผลิตอุปกรณ์ ทางเลือกในการสร้างมูลค่าในท้องถิ่นดีกว่าที่เห็นในตอนแรก กลุ่มอุปกรณ์สร้างงานด้านการกำหนดค่า การลงทะเบียน การเตรียมเครื่อง การฝึกอบรม การจัดการการรับประกัน และการซ่อมตลอดหลายปี การมอบงานนี้ให้พันธมิตรชาวโอมานที่มีช่างชาวโอมานได้รับการฝึกให้ทำ เป็นการมีส่วนร่วมในท้องถิ่นอย่างแท้จริง ไม่ใช่เพียงบนกระดาษ และเป็นลักษณะของข้อเสนอราคาของโอมานที่จัดทำมาอย่างดี</p>
+<h2 id="s-the-ex-device-dossier-for-oman">เอกสารชุดอุปกรณ์ Ex สำหรับโอมาน</h2>
+<p>การขึ้นทะเบียนและ ICV เป็นด่านเชิงพาณิชย์ ส่วนด่านทางเทคนิคมีสามด่านที่ดำเนินไปพร้อมกัน</p>
+<ul>
+<li><strong>การรับรอง Ex</strong> ใบรับรองความสอดคล้อง IECEx (Certificate of Conformity) คือเอกสารที่หน่วยงานพื้นที่อันตรายของโอมานประเมินจริง โดยมักควบคู่กับใบรับรอง ATEX ในกรณีที่ผู้ซื้อใช้ระบบของยุโรป สิ่งที่ถูกอ่านคือสตริงเครื่องหมายอุปกรณ์ฉบับสมบูรณ์ ได้แก่ กลุ่มและประเภทอุปกรณ์ ก๊าซหรือฝุ่น แนวคิดการป้องกัน กลุ่มก๊าซ คลาสอุณหภูมิ ระดับการป้องกันอุปกรณ์ และช่วงอุณหภูมิแวดล้อมที่ได้รับการรับรอง สำหรับอุปกรณ์พกพาที่ใช้ในพื้นที่กระบวนการผลิต Zone 1 และ Zone 21 กลุ่มก๊าซ IIC คือเป้าหมายที่มีความหมาย</li>
+<li><strong>ความสอดคล้องของผลิตภัณฑ์</strong> ความสอดคล้องสำหรับสินค้าควบคุมที่เข้าโอมานดำเนินการผ่านกระทรวงพาณิชย์ อุตสาหกรรม และการส่งเสริมการลงทุน และหน่วยงานด้านมาตรฐานและมาตรวิทยา ควรตรวจสอบข้อกำหนดปัจจุบันสำหรับหมวดผลิตภัณฑ์ของคุณก่อนจัดส่งสิ่งใด รวมถึงตัวอย่างสำหรับประเมิน</li>
+<li><strong>การอนุมัติแบบอุปกรณ์วิทยุ</strong> อุปกรณ์วิทยุและโทรคมนาคมต้องได้รับการอนุมัติแบบจาก Telecommunications Regulatory Authority และสินค้าที่จัดส่งต้องมีใบอนุญาตนำเข้าจาก TRA เพื่อผ่านศุลกากร ทั้งสองเป็นใบสมัครที่ผู้จัดหาที่ขึ้นทะเบียนในโอมานเป็นผู้ยื่น ซึ่งเป็นอีกเหตุผลที่ควรมีนิติบุคคลในท้องถิ่นให้พร้อมก่อนการจัดส่งครั้งแรก ไม่ใช่หลังใบสั่งซื้อแรก TRA แก้ไขระเบียบการอนุมัติแบบในปี 2024 และในเดือนมีนาคม 2026 ได้เริ่มบริการประกาศความสอดคล้องด้วยตนเอง (self-declaration of conformity) ซึ่งใช้แทนรายงานการทดสอบภาคบังคับสำหรับอุปกรณ์ที่เข้าเกณฑ์ และทำให้ระยะเวลาพิจารณาสั้นลง หากคำแนะนำด้านการปฏิบัติตามข้อกำหนดเกี่ยวกับโอมานของคุณเก่ากว่าการเปลี่ยนแปลงนี้ ควรปรับปรุงให้ทันสมัย เพราะอาจกำลังอธิบายเส้นทางที่ยุ่งยากกว่าที่มีให้ใช้ในปัจจุบัน</li>
+</ul>
+<p>มีข้อสังเกตทางเทคนิคเฉพาะของโอมานสองข้อที่ควรอยู่ในเอกสารชุด ไม่ใช่ในการชี้แจงภายหลัง ข้อแรกคือช่วงอุณหภูมิแวดล้อมที่ได้รับการรับรอง สภาพอากาศฤดูร้อนในพื้นที่ตอนในสูงกว่าอุณหภูมิแวดล้อมอ้างอิงที่ใบรับรองจำนวนมากถือเป็นฐานอยู่มาก และผู้ประเมินจะตรวจสอบช่วงและคลาสอุณหภูมิเทียบกับการจัดประเภทพื้นที่ ข้อที่สองคือฝุ่น แร่ พอลิเมอร์ และการจัดการวัสดุเทกองรอบท่าเรืออุตสาหกรรมทำให้ Zone 21 อยู่ควบคู่กับ Zone 1 ดังนั้นข้อกำหนดที่ครอบคลุมเฉพาะก๊าซตอบได้เพียงครึ่งเดียวของคำถามที่ไซต์แบบบูรณาการ</p>
+<p>ประเด็นเรื่องศัพท์เฉพาะหนึ่งข้อ ผู้ซื้อค้นหา flameproof mobile phone หรือ explosion proof mobile phone แต่สำหรับอุปกรณ์พกพา แนวคิดการป้องกันที่ใช้คือความปลอดภัยในตัวเอง (intrinsic safety) ซึ่งเป็นระดับการป้องกันอุปกรณ์ Ex ib จะใช้คำค้นหานั้นในการตลาดก็ได้ แต่อย่าใช้ในเอกสารทางเทคนิคที่ยื่น เมื่อใบรับรองระบุเป็นอย่างอื่น</p>
+<h2 id="s-what-stalls-jsrs-applications">สิ่งที่ทำให้ใบสมัคร JSRS หยุดชะงัก</h2>
+<ol>
+<li>การกำหนดรหัสหมวดหมู่ที่แคบเกินไป ทำให้ผู้จัดหาขึ้นทะเบียนแล้วแต่ไม่ปรากฏในการค้นหาที่สำคัญ</li>
+<li>การปล่อยให้ใบรับรองหมดอายุกลางสัญญา ซึ่งละเมิดข้อกำหนดให้ต้องมีใบรับรองที่ยังมีผลตลอดระยะเวลาสัญญา</li>
+<li>เอกสารสุขภาพ ความปลอดภัย และสิ่งแวดล้อมที่เป็นเพียงนโยบาย ไม่ใช่ระบบการจัดการ และไม่มีสถิติอุบัติการณ์รองรับ</li>
+<li>งบการเงินที่เก่ากว่าปีล่าสุดที่ปิดบัญชีแล้ว หรือไม่ได้ผ่านการตรวจสอบทั้งที่คาดหวังงบที่ผ่านการตรวจสอบ</li>
+<li>การเข้าใจว่า JSRS คือการอนุมัติทั้งหมด และไม่ได้จัดสรรเวลาสำหรับการประเมินทางเทคนิคของผู้ดำเนินการที่ตามมา</li>
+<li>ใบรับรอง Ex ที่การครอบคลุมโซนหรือช่วงอุณหภูมิแวดล้อมที่ได้รับการรับรองไม่ตรงกับพื้นที่ที่เสนอใช้อุปกรณ์</li>
+</ol>
+<h2 id="s-specifying-the-device-itself">การกำหนดข้อกำหนดของตัวอุปกรณ์</h2>
+<p>โอมานกระจายงานพื้นที่อันตรายอย่างเบาบางทั่วประเทศขนาดใหญ่มาก ซึ่งเปลี่ยนลำดับความสำคัญ ผู้ปฏิบัติงานภาคสนามที่ยิบาลและฟาฮุดต้องครอบคลุมเส้นทางยาวและต้องการอุปกรณ์เครื่องเดียวแทนวิทยุ กล้อง และใบตรวจรอบแบบกระดาษ สิ่งอำนวยความสะดวกการเพิ่มผลผลิตต้องการเครื่องที่ใช้เก็บใบอนุญาตทำงาน บันทึกการแยกระบบ และรูปถ่ายได้โดยไม่ต้องกลับไปที่สำนักงาน งานสายการผลิตก๊าซเหลวและท่าเทียบเรือที่กัลฮัตต้องการเครื่องที่ทนการล้างด้วยน้ำและคงสายสนทนาได้จากท่าเทียบเรือ งานซ่อมบำรุงใหญ่ที่โซฮาร์และดูกม์ต้องการกลุ่มอุปกรณ์ที่ให้ยืมซึ่งตรวจสอบย้อนหลังได้เมื่อทีมงานยุติการปฏิบัติงาน</p>
+<p>ผู้ซื้อเหล่านั้นเข้ามาด้วยคำค้นหาธรรมดา ไม่ใช่รหัสการรับรอง ได้แก่ flameproof mobile phone, explosion proof mobile phone, ATEX mobile phone, ex phone, zone 1 mobile phone และบ่อยที่สุดคือรูปแบบใดรูปแบบหนึ่งของ explosion proof mobile phone price in Oman ศัพท์ที่ใช้อาจไม่เคร่งครัด แต่ข้อกำหนดชัดเจน คือเครื่องที่นำเข้าพื้นที่ Zone 1 ได้อย่างถูกต้องโดยมีใบรับรองรองรับ จัดการได้จากคอนโซลการจัดการอุปกรณ์เคลื่อนที่ขององค์กรที่ทีมโทรคมนาคมใช้อยู่แล้ว และมีผู้สนับสนุนที่ส่งเครื่องทดแทนไปถึงสถานีในพื้นที่ตอนในได้ หน้าประเทศของเราอธิบายบริบทการปฏิบัติงานทีละตลาด รวมถึง<a href="/markets/saudi-arabia/">ซาอุดีอาระเบีย</a>และ<a href="/markets/united-arab-emirates/">สหรัฐอาหรับเอมิเรตส์</a> และหน้าโอมานจะเพิ่มเข้าใน<a href="/markets/">รายชื่อตลาดทั้งหมด</a>ในไม่ช้า</p>
+<p><em>SAMS Mobile เป็นบริษัทที่จดทะเบียนในสหราชอาณาจักร กำลังพัฒนา IS-04Z1 สมาร์ทโฟน Android ที่ออกแบบสำหรับ Zone 1 และ Zone 21 โดยมีเป้าหมายเครื่องหมาย ATEX คือ II 2 G Ex ib IIC T4 การรับรอง IECEx, ATEX และ NEC 500 Class I Division 1 อยู่ระหว่างดำเนินการ และอุปกรณ์มีกำหนดเปิดตัวในไตรมาส 4 ปี 2026 เราไม่มีใบรับรอง JSRS และยังไม่ได้ขึ้นทะเบียนกับ PDO, OQ หรือผู้ดำเนินการรายใดในโอมาน และไม่ได้อ้างว่าได้ขึ้นทะเบียน หากคุณกำลังจัดทำข้อกำหนดสำหรับโอมานในขณะนี้ สามารถขอเอกสารข้อมูลจำเพาะและกำหนดการรับรองเป็นลายลักษณ์อักษรได้ และสามารถจัดเตรียมเครื่องสำหรับประเมินผลล่วงหน้าก่อนเปิดตัวได้</em></p>
+<h2 id="s-faq">คำถามที่พบบ่อย</h2>
+<div class="s2-pg-faq">
+<details class="s2-pg-qa">
+<summary>การขึ้นทะเบียน JSRS สำหรับผู้จัดหาต่างประเทศมีค่าใช้จ่ายเท่าใด</summary>
+<div class="s2-pg-qa__a">
+<p>ตัวเลขที่เผยแพร่ ณ เวลาที่เขียนระบุว่าค่าสมาชิกสำหรับผู้จัดหาต่างประเทศประมาณ 1,000 ดอลลาร์สหรัฐสำหรับหนึ่งปี หรือ 2,250 ดอลลาร์สหรัฐสำหรับสามปี บริษัทสัญชาติโอมานจ่ายค่าธรรมเนียมแบบแบ่งช่วงประมาณ 50 ถึง 900 เรียลโอมานตามการจัดประเภท บวก VAT ค่าธรรมเนียมมีการปรับปรุง ดังนั้นตัวเลขที่เชื่อถือได้คือตัวเลขที่แสดงบนพอร์ทัล JSRS ขณะขึ้นทะเบียน</p>
+</div>
+</details>
+<details class="s2-pg-qa">
+<summary>ใบรับรอง JSRS มีอายุนานเท่าใด</summary>
+<div class="s2-pg-qa__a">
+<p>ใบรับรองสำหรับผู้จัดหาสัญชาติโอมานมีอายุสามปี ผู้จัดหาต่างประเทศถือตามอายุที่สมัครไว้ โดยเลือกระหว่างสมาชิกหนึ่งปีหรือสามปี ตัวเลือกสามปีมีส่วนลดเมื่อเทียบกับการต่อรายปีสามครั้ง ผู้จัดหาที่ได้รับสัญญาหรือใบสั่งซื้อต้องรักษาใบรับรองที่ยังมีผลตลอดระยะเวลาสัญญา ไม่ใช่เพียง ณ เวลายื่นเสนอราคา</p>
+</div>
+</details>
+<details class="s2-pg-qa">
+<summary>โทรศัพท์ต้องได้รับการอนุมัติแบบจาก TRA จึงจะนำเข้าโอมานได้หรือไม่</summary>
+<div class="s2-pg-qa__a">
+<p>ใช่ อุปกรณ์วิทยุและโทรคมนาคมต้องได้รับการอนุมัติแบบจาก Telecommunications Regulatory Authority และสินค้าที่จัดส่งต้องมีใบอนุญาตนำเข้าจาก TRA เพื่อผ่านศุลกากร ทั้งสองใบสมัครยื่นโดยผู้จัดหาที่ขึ้นทะเบียนในโอมาน ในเดือนมีนาคม 2026 TRA ได้เริ่มบริการประกาศความสอดคล้องด้วยตนเอง ซึ่งใช้แทนรายงานการทดสอบภาคบังคับสำหรับอุปกรณ์ที่เข้าเกณฑ์ และทำให้ระยะเวลาพิจารณาสั้นลง</p>
+</div>
+</details>
+<details class="s2-pg-qa">
+<summary>มีการให้คะแนนมูลค่าในประเทศในการประมูลน้ำมันและก๊าซของโอมานหรือไม่</summary>
+<div class="s2-pg-qa__a">
+<p>มี แต่เป็นแบบรวมศูนย์น้อยกว่าในสหรัฐอาหรับเอมิเรตส์หรือกาตาร์ ICV ฝังอยู่ในการประเมินการประมูลผ่านข้อกำหนด เงื่อนไข และตัวชี้วัดมาตรฐาน โดยกระทรวงพลังงานและแร่ธาตุและคณะกรรมการ ICV ทำหน้าที่กำกับดูแล การจ้างงานชาวโอมานและการใช้ SME และผู้รับเหมาในชุมชนท้องถิ่นเป็นภาระผูกพันที่มีการตรวจสอบ การนำไปใช้ต่างกันตามผู้ดำเนินการและสัญญา ดังนั้นควรอ่านข้อกำหนด ICV ของแต่ละการประมูล</p>
+</div>
+</details>
+</div>
+<h2 id="s-sources">แหล่งข้อมูลทางการ</h2>
+<ul class="s2-pg-sourcelist">
+<li><a href="https://businessgateways.com/" rel="noopener" target="_blank">Business Gateways (JSRS)</a></li>
+<li><a href="https://www.pdo.co.om/" rel="noopener" target="_blank">Petroleum Development Oman</a></li>
+<li><a href="https://www.iecex.com/" rel="noopener" target="_blank">ระบบ IECEx</a></li>
+</ul>
+<aside class="s2-pg-cta s2-pg-cta--inline" data-reveal="">
+<div class="s2-pg-cta__text"><span class="s2-eyebrow s2-eyebrow--onnavy"><span class="s2-eyebrow__dot"></span>IS-04Z1</span>
+<h2>กำลังจัดทำเอกสารสำหรับตลาดของคุณใช่หรือไม่</h2>
+<p>IS-04Z1 เป็นสมาร์ทโฟนชนิดปลอดภัยในตัวเอง (Intrinsically Safe) สำหรับ Zone 1 และ Zone 21 เปิดตัวไตรมาส 4 ปี 2026 โดยการรับรอง IECEx, ATEX และ NEC 500 อยู่ระหว่างดำเนินการ ขอรับเอกสารข้อมูลจำเพาะและกำหนดการรับรอง หรืออ่านหน้าประเทศสำหรับตลาดของคุณ</p>
+</div>
+<div class="s2-pg-cta__btns"><a href="/th/contact/?subject=Datasheet%20Request" class="s2-btn s2-btn--onlight">ขอเอกสารข้อมูลจำเพาะ<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="/markets/" class="s2-btn s2-btn--ghost-dark">คู่มือรายประเทศ</a></div>
+</aside>
+</article>
+<aside class="s2-pg-article__side">
+<nav class="s2-pg-toc" aria-label="ในหน้านี้"><span class="s2-pg-toc__title">ในหน้านี้</span>
+<ol>
+<li><a href="#s-what-jsrs-is-and-who-runs-it">JSRS คืออะไร และใครเป็นผู้ดำเนินการ</a></li>
+<li><a href="#s-the-registration-process-and-the-jcc-category-code">กระบวนการขึ้นทะเบียนและรหัสหมวดหมู่ JCC</a></li>
+<li><a href="#s-fees-and-validity">ค่าธรรมเนียมและอายุใบรับรอง</a></li>
+<li><a href="#s-how-pdo-uses-jsrs">PDO ใช้ JSRS อย่างไร</a></li>
+<li><a href="#s-oq-oq8-and-the-rest-of-the-operator-community">OQ, OQ8 และชุมชนผู้ดำเนินการอื่นๆ</a></li>
+<li><a href="#s-in-country-value-in-oman">มูลค่าในประเทศ (In-country value) ในโอมาน</a></li>
+<li><a href="#s-the-ex-device-dossier-for-oman">เอกสารชุดอุปกรณ์ Ex สำหรับโอมาน</a></li>
+<li><a href="#s-what-stalls-jsrs-applications">สิ่งที่ทำให้ใบสมัคร JSRS หยุดชะงัก</a></li>
+<li><a href="#s-specifying-the-device-itself">การกำหนดข้อกำหนดของตัวอุปกรณ์</a></li>
+<li><a href="#s-faq">คำถามที่พบบ่อย</a></li>
+<li><a href="#s-sources">แหล่งข้อมูลทางการ</a></li>
+</ol>
+</nav>
+<div class="s2-pg-sidecard"><strong>SAMS IS-04Z1</strong>
+<p>สมาร์ทโฟนปลอดภัยในตัวเองสำหรับ Zone 1 และ Zone 21 เปิดตัวไตรมาส 4 ปี 2026</p>
+<a href="/th/contact/?subject=Datasheet%20Request" class="s2-btn s2-btn--onlight s2-btn--sm">ขอรับเอกสารข้อมูลจำเพาะ</a>
+</div>
+</aside>
+</div>
+</section>
+<section class="s2-pg-sec s2-pg-sec--ice">
+<div class="s2-wrap">
+<div class="s2-pg-head" data-reveal=""><span class="s2-eyebrow"><span class="s2-eyebrow__dot"></span>เพิ่มเติมในหมวดนี้</span>
+<h2>คู่มือสำหรับผู้ขาย</h2>
+</div>
+<div class="s2-pg-insights s2-pg-insights--compact">
+<article class="s2-pg-insight" data-cat="Vendor Guides" data-reveal="">
+<a href="/th/insights/saudi-aramco-supplier-registration-atex-equipment/">
+<span class="s2-pg-insight__meta"><span class="s2-pg-insight__cat">คู่มือสำหรับผู้ขาย</span><time datetime="2026-09-09">9 กันยายน 2026</time></span>
+<h2>การลงทะเบียนผู้จัดจำหน่ายกับ Saudi Aramco สำหรับอุปกรณ์ ATEX และอุปกรณ์สำหรับพื้นที่อันตราย</h2>
+<span class="s2-pg-insight__more">อ่านคู่มือ <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a>
+</article>
+<article class="s2-pg-insight" data-cat="Vendor Guides" data-reveal="">
+<a href="/th/insights/qatarenergy-vendor-registration-guide/">
+<span class="s2-pg-insight__meta"><span class="s2-pg-insight__cat">คู่มือสำหรับผู้ขาย</span><time datetime="2026-09-09">9 กันยายน 2026</time></span>
+<h2>การลงทะเบียนผู้ขายกับ QatarEnergy: Mushtaryat, Tawteen และเอกสารสำหรับพื้นที่อันตราย</h2>
+<span class="s2-pg-insight__more">อ่านคู่มือ <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a>
+</article>
+<article class="s2-pg-insight" data-cat="Vendor Guides" data-reveal="">
+<a href="/th/insights/koc-knpc-kipic-supplier-registration-kuwait/">
+<span class="s2-pg-insight__meta"><span class="s2-pg-insight__cat">คู่มือสำหรับผู้ขาย</span><time datetime="2026-09-09">9 กันยายน 2026</time></span>
+<h2>การลงทะเบียนผู้ขายกับ KOC: คู่มือสำหรับผู้จัดหาอุปกรณ์ของ KOC, KNPC และ KIPIC</h2>
+<span class="s2-pg-insight__more">อ่านคู่มือ <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a>
+</article>
+<article class="s2-pg-insight" data-cat="Vendor Guides" data-reveal="">
+<a href="/th/insights/adnoc-supplier-registration-icv-guide/">
+<span class="s2-pg-insight__meta"><span class="s2-pg-insight__cat">คู่มือสำหรับผู้ขาย</span><time datetime="2026-09-09">9 กันยายน 2026</time></span>
+<h2>การลงทะเบียนผู้จัดจำหน่ายกับ ADNOC และใบรับรอง ICV: คู่มือสำหรับผู้จัดหาอุปกรณ์</h2>
+<span class="s2-pg-insight__more">อ่านคู่มือ <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="s2-footer s2-footer--plain">
+<div class="s2-wrap">
+<div class="s2-footer__grid">
+<div class="s2-footer__brand">
+<img decoding="async" loading="lazy" src="/img/logo-blue.png" alt="SAMS" width="400" height="273">
+<p>สมาร์ทโฟนปลอดภัยในตัวเองสำหรับสภาพแวดล้อมอันตราย Zone 1 / 21 ออกแบบตามมาตรฐาน IECEx, ATEX และ NEC 500 เปิดตัวไตรมาส 4 ปี 2026</p>
+<span class="s2-chip s2-chip--outline-light">เปิดตัวไตรมาส 4 ปี 2026</span>
+</div>
+<div class="s2-footer__col">
+<span>ผลิตภัณฑ์</span>
+<a href="/th/product/">IS-04Z1</a>
+<a href="/th/product/#specifications">ข้อมูลจำเพาะ</a>
+<a href="/th/certifications/">การรับรอง</a>
+<a href="/th/contact/?subject=Datasheet%20Request">ขอเอกสารข้อมูลจำเพาะ</a>
+</div>
+<div class="s2-footer__col">
+<span>บริษัท</span>
+<a href="/th/about/">เกี่ยวกับ SAMS</a>
+<a href="/th/become-a-distributor/">เป็นตัวแทนจำหน่าย</a>
+<a href="/th/industries/">อุตสาหกรรม</a>
+<a href="/th/insights/">บล็อก</a>
+</div>
+<div class="s2-footer__col">
+<span>ฝ่ายสนับสนุน</span>
+<a href="/th/support/">การสนับสนุนผลิตภัณฑ์</a>
+<a href="/th/contact/">ติดต่อเรา</a>
+<a href="mailto:info@sams-mobile.com">info@sams-mobile.com</a>
+</div>
+<div class="s2-footer__col">
+<span>คู่มือ</span>
+<a href="/th/insights/explosion-proof-vs-intrinsically-safe-vs-flameproof/">ปลอดภัยในตัวเอง เทียบกับ ป้องกันการระเบิด</a>
+<a href="/th/insights/hazardous-area-zones-and-divisions/">โซนพื้นที่อันตราย</a>
+<a href="/th/insights/iecex-vs-atex-vs-nec-500/">ATEX เทียบกับ IECEx เทียบกับ NEC 500</a>
+<a href="/th/insights/how-to-specify-an-intrinsically-safe-smartphone/">การเลือกสมาร์ทโฟน Ex</a>
+<a href="/markets/">ตลาด</a>
+</div>
+</div>
+<div class="s2-footer__bottom">
+<span>© 2026 SAMS Mobile สงวนลิขสิทธิ์ จดทะเบียนในสหราชอาณาจักร</span>
+<div class="s2-footer__legal">
+<a href="/th/privacy-policy/">นโยบายความเป็นส่วนตัว</a>
+<a href="/th/terms/">ข้อกำหนดการใช้งาน</a>
+<a href="/th/cookie-policy/">นโยบายคุกกี้</a>
+<a href="#cookie-preferences">การตั้งค่าคุกกี้</a>
+</div>
+</div>
+</div>
+</footer>
+<button class="s2-top" id="s2Top" type="button" aria-label="กลับขึ้นด้านบน">
+<svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script src="/js/app2.js?v=20261004d"></script>
+<script src="/js/smooth-scroll.js?v=20261004d" defer=""></script>
+</body>
+</html>
